@@ -18,30 +18,17 @@ See [license](./LICENSE) at this project root for more detailed information
 
 ### To do
 
-- Adjust vendor example
-
-### Added
-
-- Refactor folder structure
-
-## [0.0.2] - 2023-06-03
-
-### Added
-
-- Add CTest
-
-## [0.0.1] - 2023-06-03
+- Remove main executable and keep only testing for library
+- Add example for usage
+- Implement e_string_t
+- Implement e_bigdec_t
+- Implement e_bigint_t
+- Implement e_vector_t
+- Implement e_format
 
 ### Added
 
 - Created base repository with simple guidelines
-- Added copyright notice at LICENSE file
-- Added header copyright notice on all files
-- Created git auxiliary files
-- Created base CMakeLists setup
-- Created this CHANGELOG
-- Added main and projectlib example files
-- Added simple UTF-8 example for log
+- Adjusting template project for library usage
 
 [0.0.1]: https://github.com/diogoefl/cmake_c_project_template/releases/tag/v0.0.1
-[0.0.2]: https://github.com/diogoefl/cmake_c_project_template/releases/tag/v0.0.2

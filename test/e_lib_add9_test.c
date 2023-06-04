@@ -10,13 +10,13 @@
 #include <stdint.h>
 #include <stdio.h>
 
-#include "project_lib.h"
+#include "e_lib.h"
 
 void test_1(void)
 {
-    fprintf(stdout, "%s ... ", u8"[project_lib_test] Testing project_lib_add9 with 10");
+    fprintf(stdout, "%s ... ", u8"[e_lib_test] Testing e_add9 with 10");
     
-    if (project_lib_add9(10) == 19) {
+    if (e_add9(10) == 19) {
         fprintf(stdout, "%s\n", u8"SUCCESS");
     } else {
         fprintf(stdout, "%s\n", u8"FAIL");
@@ -26,9 +26,9 @@ void test_1(void)
 
 void test_2(void)
 {
-    fprintf(stdout, "%s ... ", u8"[project_lib_test] Testing project_lib_add9 with 868");
+    fprintf(stdout, "%s ... ", u8"[e_lib_test] Testing e_add9 with 868");
     
-    if (project_lib_add9(868) == 877) {
+    if (e_add9(868) == 877) {
         fprintf(stdout, "%s\n", u8"SUCCESS");
     } else {
         fprintf(stdout, "%s\n", u8"FAIL");
