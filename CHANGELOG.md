@@ -20,7 +20,7 @@ See [license](./LICENSE) at this project root for more detailed information
 
 - Remove main executable and keep only testing for library
 - Add example for usage
-- Implement e_string_t
+- Implement rest of e_string_t
 - Implement e_bigdec_t
 - Implement e_bigint_t
 - Implement e_vector_t
@@ -28,6 +28,9 @@ See [license](./LICENSE) at this project root for more detailed information
 
 ### Added
 
+- e_string_t struct
+- e_string_validate buffer function
+- e_string_valdiate buffer unit testing
 - Created base repository with simple guidelines
 - Adjusting template project for library usage
 

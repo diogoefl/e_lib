@@ -4,6 +4,7 @@
  */
 
 /* e_lib implementation 
+ *
  * this library implements common usage requirements for c projects
  */
 

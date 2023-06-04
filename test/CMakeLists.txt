@@ -3,6 +3,7 @@
 # See LICENSE file at this project root for more detailed information
 
 # CMake Library testing
+add_subdirectory(e_string)
 
 # Add9 function testing
 add_executable(e_lib_test_add9

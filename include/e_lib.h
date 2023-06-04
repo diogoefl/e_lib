@@ -4,6 +4,7 @@
  */
 
 /* e_lib header 
+ *
  * this library implements common usage requirements for c projects
  * 
  * usage: add #include "e_lib.h" to your header file
