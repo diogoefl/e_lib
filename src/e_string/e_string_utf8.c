@@ -5,7 +5,9 @@
 
 /* e_string_utf8 implementation.
  *
- * this module implements UTF-8 helper functions.
+ * this module implements UTF-8 helper functions. 
+ * 
+ * usage: add #include "e_string.h" to your file and link to e_string library
  */
 
 #include "e_string.h"

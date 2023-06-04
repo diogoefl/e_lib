@@ -4,6 +4,7 @@
 
 # e_string library
 add_library(e_string STATIC
+            "e_string_from.c"
             "e_string_utf8.c"
             "e_string_validate.c")
 

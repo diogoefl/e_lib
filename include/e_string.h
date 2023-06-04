@@ -20,6 +20,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+/* NAMESPACE E_STRING *********************************************************/
+
 /* e_string struct
  *
  * this is the basic data structure to keep track on string size and capacity.
@@ -69,7 +71,96 @@ typedef int e_string_errno_t;
 #define E_STRING_SUCCESS         true    /* 1 */
 
 
-/* public functions: data access and validation
+/* constructors
+ * use this group of functions to create e_string_t data.
+ */
+
+/* e_string_from macro
+ *
+ * this macro delegates to the specialized constructor based on input type.
+ */
+#define e_string_from(X) _Generic((X),                       \
+                         const char*:  e_string_from_cstr,    \
+                         uint64_t:     e_string_from_uint64,  \
+                         uint32_t:     e_string_from_uint32,  \
+                         uint16_t:     e_string_from_uint16,  \
+                         uint8_t:      e_string_from_uint8,   \
+                         int64_t:      e_string_from_int64,   \
+                         int32_t:      e_string_from_int32,   \
+                         int16_t:      e_string_from_int16,   \
+                         int8_t:       e_string_from_int8,    \
+                         int:          e_string_from_int,     \
+                         unsigned int: e_string_from_uint,    \
+                         )(X)
+
+/* e_string_from_cstr
+ *
+ * this function allows the user to create a e_string based on cstr.
+ * it expects the user to provide a UTF-8 compliant cstr.
+ */
+e_string_t e_string_from_cstr(const char* cstr);
+
+/* e_string_from_uint64
+ *
+ * this function allows the user to create based on unsigned 64bit integer.
+ */
+e_string_t e_string_from_uint64(const uint64_t number);
+
+/* e_string_from_uint32
+ *
+ * this function allows the user to create based on unsigned 32bit integer.
+ */
+e_string_t e_string_from_uint32(const uint32_t number);
+
+/* e_string_from_uint16
+ *
+ * this function allows the user to create based on unsigned 16bit integer.
+ */
+e_string_t e_string_from_uint16(const uint16_t number);
+
+/* e_string_from_uint8
+ *
+ * this function allows the user to create based on unsigned 8bit integer.
+ */
+e_string_t e_string_from_uint8(const uint8_t number);
+
+/* e_string_from_int64
+ *
+ * this function allows the user to create based on signed 64bit integer.
+ */
+e_string_t e_string_from_int64(const int64_t number);
+
+/* e_string_from_int32
+ *
+ * this function allows the user to create based on signed 32bit integer.
+ */
+e_string_t e_string_from_int32(const int32_t number);
+
+/* e_string_from_int16
+ *
+ * this function allows the user to create based on signed 16bit integer.
+ */
+e_string_t e_string_from_int16(const int16_t number);
+
+/* e_string_from_int8
+ *
+ * this function allows the user to create based on signed 8bit integer.
+ */
+e_string_t e_string_from_int8(const int8_t number);
+
+/* e_string_from_int
+ *
+ * this function allows the user to create based on signed integer.
+ */
+e_string_t e_string_from_int(const int number);
+
+/* e_string_from_uint
+ *
+ * this function allows the user to create based on unsigned integer.
+ */
+e_string_t e_string_from_uint(const unsigned int number);
+
+/* data access and validation
  * use this group of functions to validate e_string_t data and safe access.
  */
 
@@ -80,15 +171,14 @@ typedef int e_string_errno_t;
  * compatible size.
  *
  * it does not change the given data, nor it fix invalid structures.
- *
- * TODO: incomplete UTF8 checking
  */
 e_string_errno_t e_string_validate(const e_string_t* string);
 
 
-/* *****************************************************************************
- * NAMESPACE UTF8
- * ****************************************************************************/
+
+
+/* NAMESPACE E_STRING_UTF8 ****************************************************/
+
 
 /* e_string_utf8_is_ascii
  *
