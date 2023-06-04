@@ -93,9 +93,10 @@ bool priv_validate_buffer(e_string_t string)
 }
 
 
-/* e_string_validate_buffer_test_valid
+/* e_string_validate_test
  *
- * create string based on input and test if string are valid.
+ * create string based on input and test if string are valid on its memory,
+ * and also if all content is UTF-8 compliant
  */
 int main(int argc, char* argv[])
 {
@@ -105,6 +106,8 @@ int main(int argc, char* argv[])
     
     /* execute validations */
     if (priv_validate_buffer(string) == false) {
+        exit(EXIT_FAILURE);
+    } else if (e_string_validate(&string) != E_STRING_SUCCESS) {
         exit(EXIT_FAILURE);
     }
 
