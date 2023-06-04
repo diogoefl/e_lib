@@ -15,7 +15,6 @@
 #include <stdint.h>
 
 #include "e_string.h"
-#include "e_string_utf8.h"
 
 
 /* private function e_string_validate_buffer
@@ -118,6 +117,7 @@ e_string_errno_t e_string_validate_utf8(const e_string_t* string)
 
     return result;
 }
+
 
 e_string_errno_t e_string_validate(const e_string_t* string)
 {

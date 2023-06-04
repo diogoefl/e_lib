@@ -6,10 +6,9 @@
 /* e_string_utf8 implementation.
  *
  * this module implements UTF-8 helper functions.
- * final user is not supposed to use this module.
  */
 
-#include "e_string_utf8.h"
+#include "e_string.h"
 
 
 bool e_string_utf8_is_ascii(const uint8_t u8_byte, const bool sanity)

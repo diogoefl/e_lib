@@ -16,7 +16,7 @@ target_include_directories(e_string PRIVATE
                            $<INSTALL_INTERFACE:include/e_lib>)
 
 set_target_properties(e_string PROPERTIES
-                      PUBLIC_HEADER "include/e_string.h")
+                      PUBLIC_HEADER ["include/e_string.h"])
 
 INSTALL(TARGETS e_string
         LIBRARY DESTINATION lib
