@@ -25,6 +25,7 @@ See [license](./LICENSE) at this project root for more detailed information
 - Implement e_bigint_t
 - Implement e_vector_t
 - Implement e_format
+- Reset std to C17
 
 ### Added
 

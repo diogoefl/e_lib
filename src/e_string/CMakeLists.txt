@@ -8,7 +8,7 @@ add_library(e_string STATIC
             "e_string_utf8.c"
             "e_string_validate.c")
 
-set_property(TARGET e_string PROPERTY C_STANDARD          23 )
+set_property(TARGET e_string PROPERTY C_STANDARD          17 )
 set_property(TARGET e_string PROPERTY C_STANDARD_REQUIRED ON )
 set_property(TARGET e_string PROPERTY C_EXTENSIONS        OFF)
 

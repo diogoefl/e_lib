@@ -8,7 +8,7 @@
 add_executable(e_string_validate_test
                "e_string_validate_test.c")
 
-set_property(TARGET e_string_validate_test PROPERTY C_STANDARD          23)
+set_property(TARGET e_string_validate_test PROPERTY C_STANDARD          17)
 set_property(TARGET e_string_validate_test PROPERTY C_STANDARD_REQUIRED ON)
 set_property(TARGET e_string_validate_test PROPERTY C_EXTENSIONS        OFF)
 

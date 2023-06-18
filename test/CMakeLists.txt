@@ -9,7 +9,7 @@ add_subdirectory(e_string)
 add_executable(e_lib_test_add9
                "e_lib_add9_test.c")
 
-set_property(TARGET e_lib_test_add9 PROPERTY C_STANDARD          23)
+set_property(TARGET e_lib_test_add9 PROPERTY C_STANDARD          17)
 set_property(TARGET e_lib_test_add9 PROPERTY C_STANDARD_REQUIRED ON)
 set_property(TARGET e_lib_test_add9 PROPERTY C_EXTENSIONS        OFF)
 

@@ -6,7 +6,7 @@
 cmake_minimum_required(VERSION 3.23)
 project(e_lib
         VERSION      0.0.1
-        DESCRIPTION  "e_xtended basic library for C23"
+        DESCRIPTION  "e_xtended basic library for C17"
         HOMEPAGE_URL "https://github.com/diogoefl/e_lib"
         LANGUAGES    C )
 

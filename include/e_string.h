@@ -79,7 +79,7 @@ typedef int e_string_errno_t;
  *
  * this macro delegates to the specialized constructor based on input type.
  */
-#define e_string_from(X) _Generic((X),                       \
+#define e_string_from(X) _Generic((X),                        \
                          const char*:  e_string_from_cstr,    \
                          uint64_t:     e_string_from_uint64,  \
                          uint32_t:     e_string_from_uint32,  \

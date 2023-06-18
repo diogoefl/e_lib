@@ -6,7 +6,7 @@
 add_library(e_lib STATIC
             "e_lib.c")
 
-set_property(TARGET e_lib PROPERTY C_STANDARD          23 )
+set_property(TARGET e_lib PROPERTY C_STANDARD          17 )
 set_property(TARGET e_lib PROPERTY C_STANDARD_REQUIRED ON )
 set_property(TARGET e_lib PROPERTY C_EXTENSIONS        OFF)
 
